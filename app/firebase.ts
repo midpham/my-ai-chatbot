@@ -1,11 +1,10 @@
-// Import the functions you need from the SDKs you need
+// 1. Lấy khung sườn của Firebase
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// 2. TỰ MÌNH GỌI THÊM TÍNH NĂNG FIRESTORE (Database)
+import { getFirestore } from "firebase/firestore";
+
+// 3. Dán đúng phần Config mà Firebase cấp cho bạn vào đây
 const firebaseConfig = {
   apiKey: "AIzaSyABTrxEjKXMUFvl3xH5t9T-41NTH9C3alI",
   authDomain: "llm-gateway-chatbot.firebaseapp.com",
@@ -13,9 +12,9 @@ const firebaseConfig = {
   storageBucket: "llm-gateway-chatbot.firebasestorage.app",
   messagingSenderId: "186076332243",
   appId: "1:186076332243:web:4cae27e72809b03ddf9426",
-  measurementId: "G-F26WTSLNXZ"
+  measurementId: "G-F26WTSLNXZ" // Giữ hay xóa dòng này đều không sao cả
 };
 
-// Initialize Firebase
+// 4. Khởi động app và Database
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+export const db = getFirestore(app);
