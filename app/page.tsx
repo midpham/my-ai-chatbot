@@ -83,7 +83,7 @@ export default function ChatUI() {
 
       // B. GỌI API LÊN CLOUDFLARE WORKER
       // QUAN TRỌNG: Thay link dưới đây bằng link Cloudflare Worker thực tế của bạn
-      const WORKER_URL = "https://ĐIỀN-LINK-WORKER-CỦA-BẠN.workers.dev"; 
+      const WORKER_URL = "https://my-ai-proxy.phamtrungt47.workers.dev"; 
       
       const response = await fetch(WORKER_URL, {
         method: "POST",
